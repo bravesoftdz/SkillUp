@@ -1,0 +1,53 @@
+object TcpForm: TTcpForm
+  Left = 0
+  Top = 0
+  Caption = 'TcpForm'
+  ClientHeight = 500
+  ClientWidth = 493
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 2
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 312
+    Top = 136
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 493.000000000000000000
+    Size.Height = 435.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 485.000000000000000000
+    Viewport.Height = 427.000000000000000000
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Size.Width = 493.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 449.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = Edit1Change
+    end
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = '192.168.0.1'
+    IPVersion = Id_IPv4
+    Port = 23
+    ReadTimeout = -1
+    Left = 264
+    Top = 136
+  end
+end

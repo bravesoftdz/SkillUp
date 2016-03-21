@@ -1,0 +1,57 @@
+object UdpForm: TUdpForm
+  Left = 0
+  Top = 0
+  Caption = 'UdpForm'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 415.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 411.000000000000000000
+  end
+  object Rectangle1: TRectangle
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    object RightButton: TButton
+      Tag = 1
+      Position.X = 152.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'RightButton'
+      OnMouseDown = ButtonMouseDown
+    end
+    object LeftButton: TButton
+      Position.X = 24.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'LeftButton'
+      OnMouseDown = ButtonMouseDown
+    end
+  end
+  object IdUDPServer1: TIdUDPServer
+    Active = True
+    Bindings = <>
+    DefaultPort = 65002
+    OnUDPRead = IdUDPServer1UDPRead
+    Left = 224
+    Top = 168
+  end
+end
